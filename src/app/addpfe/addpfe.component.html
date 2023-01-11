@@ -1,0 +1,39 @@
+<div class="card">
+    <div class="card-header bg-success text-white text-align-center">
+        <h2>Ajouter un Pfe</h2>
+    </div>
+    <div class="card-body">
+        <div class="form-group">
+        <div class="row">
+                <div class="col-3">
+                    <label>Titre PFE</label>
+                </div>
+                <div class="col-9">
+                    <input type="text" class="form-control" placeholder="Titre" [(ngModel)]="pfe.titre">
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <div class="row">
+                <div class="col-3">
+                    <label>Type</label>
+                </div>
+                <div class="col-9">
+                    <select class="form-control" placeholder="Choix du type" [(ngModel)]="pfe.type" >
+                        <option *ngFor="let t of types"  [ngValue]="t">{{t}}</option>
+                            </select>
+                </div>
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input type="button" class="btn btn-success rounded-pill" (click)="addPfe()" value="Ajouter">
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
